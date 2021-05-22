@@ -499,6 +499,11 @@ section(1 /*1*/,RESOURCE_1 /*{{Количество аккаунтов с кот
       set_proxy_extended("true" == "true", "true" == "true", "true" == "true", "true" == "true", "true" == "true", "ip-api.com", "", null)!
       section_end()!
 
+      section_start("", 193500155)!
+      /*Dat:eyJzIjoibGFiZWwiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsImQiOlt7ImlkIjoiTGFiZWwiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IlJFRlJFU0hfUFJPWFkiLCJjbGFzcyI6InN0cmluZyJ9XX0=*/
+      _set_goto_label("REFRESH_PROXY")!
+      section_end()!
+
       section_start("", 841435464)!
       /*Dat:eyJzIjoibG9hZCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwiZCI6W3siaWQiOiJMb2FkVXJsIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiJ7e9Ch0YHRi9C70LrQsCDQtNC70Y8g0YHQvNC10L3RiyDQsNC50L/QuH19IiwiY2xhc3MiOiJzdHJpbmcifSx7ImlkIjoiUmVmZXJyZXIiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IiIsImNsYXNzIjoic3RyaW5nIn1dfQ==*/
       RS("Ссылка для смены айпи", false, false)!
@@ -517,13 +522,6 @@ section(1 /*1*/,RESOURCE_1 /*{{Количество аккаунтов с кот
       wait_async_load()!
       section_end()!
 
-      section_start("", 846460326)!
-      /*Dat:eyJzIjoibG9nIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJkIjpbeyJpZCI6IkxvZ1RleHQiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6ItC/0LXRiNC10YDQtdC7INC/0L4g0YHRgdGL0LvQutC1e3vQodGB0YvQu9C60LAg0LTQu9GPINGB0LzQtdC90Ysg0LDQudC/0Lh9fSAiLCJjbGFzcyI6InN0cmluZyJ9XX0=*/
-      RS("Ссылка для смены айпи", false, false)!
-      RESOURCE_578768 = _result().get()
-      log("пешерел по ссылке" + RESOURCE_578768 + " ")
-      section_end()!
-
       section_start("", 440005752)!
       /*Dat:eyJzIjoibG9hZCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwiZCI6W3siaWQiOiJMb2FkVXJsIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiJ5YW5kZXgucnUvaW50ZXJuZXQiLCJjbGFzcyI6InN0cmluZyJ9LHsiaWQiOiJSZWZlcnJlciIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmcifV19*/
       _load("yandex.ru/internet", "", true)!
@@ -537,17 +535,54 @@ section(1 /*1*/,RESOURCE_1 /*{{Количество аккаунтов с кот
       section_end()!
 
       section_start("", 67922981)!
-      /*Dat:eyJzIjoidGV4dCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwiZCI6W3siaWQiOiJTYXZlVGV4dCIsInR5cGUiOiJ2YXIiLCJkYXRhIjoiU0FWRURfVEVYVCJ9XSwicCI6eyJpc19pbWFnZSI6ZmFsc2UsImNzcyI6IiA+Q1NTPiB1bCA+IDpudGgtY2hpbGQoMSkgPiA6bnRoLWNoaWxkKDIpIiwidmVyc2lvbiI6IjEuMCIsImNzczEiOiIgPkNTUz4gdWwgPiA6bnRoLWNoaWxkKDEpID4gOm50aC1jaGlsZCgyKSIsImNzczIiOiIiLCJjc3MzIjoiID5DU1M+IC5nZW5lcmFsLWluZm8gPiA6bnRoLWNoaWxkKDEpID4gOm50aC1jaGlsZCgyKSIsImN1cnJlbnQiOiJjc3MiLCJtYXRjaCI6Ij5NQVRDSD48ZGl2Pjg1LjE5My4xMjIuMjEyPC9kaXY+IiwieHBhdGgiOiIgPlhQQVRIPiBpZChcIm1vdW50XCIpL2RpdltAY2xhc3M9XCJsYXlvdXRcIl0vZGl2W0BjbGFzcz1cImxheW91dF9fdG9wLXdyYXBwZXJcIl0vZGl2W0BjbGFzcz1cImxheW91dF9fdG9wXCJdL3NlY3Rpb25bQGNsYXNzPVwibGF5b3V0X190b3Atc2VjdGlvblwiXS91bFtAY2xhc3M9XCJnZW5lcmFsLWluZm8gbGF5b3V0X19nZW5lcmFsLWluZm9cIl0vbGlbQGNsYXNzPVwicGFyYW1ldGVyLXdyYXBwZXIgZ2VuZXJhbC1pbmZvX19wYXJhbWV0ZXJcIl0vZGl2WzJdIiwiYXQiOiIyNTMsIDIwMyIsIndlIjp0cnVlLCJmYSI6dHJ1ZX19*/
+      /*Dat:eyJzIjoidGV4dCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwiZCI6W3siaWQiOiJTYXZlVGV4dCIsInR5cGUiOiJ2YXIiLCJkYXRhIjoiSVBfVEVYVCJ9XSwicCI6eyJpc19pbWFnZSI6ZmFsc2UsImNzcyI6IiA+Q1NTPiB1bCA+IDpudGgtY2hpbGQoMSkgPiA6bnRoLWNoaWxkKDIpIiwidmVyc2lvbiI6IjEuMCIsImNzczEiOiIgPkNTUz4gdWwgPiA6bnRoLWNoaWxkKDEpID4gOm50aC1jaGlsZCgyKSIsImNzczIiOiIiLCJjc3MzIjoiID5DU1M+IC5nZW5lcmFsLWluZm8gPiA6bnRoLWNoaWxkKDEpID4gOm50aC1jaGlsZCgyKSIsImN1cnJlbnQiOiJjc3MiLCJtYXRjaCI6Ij5NQVRDSD48ZGl2Pjg1LjE5My4xMjIuMjEyPC9kaXY+IiwieHBhdGgiOiIgPlhQQVRIPiBpZChcIm1vdW50XCIpL2RpdltAY2xhc3M9XCJsYXlvdXRcIl0vZGl2W0BjbGFzcz1cImxheW91dF9fdG9wLXdyYXBwZXJcIl0vZGl2W0BjbGFzcz1cImxheW91dF9fdG9wXCJdL3NlY3Rpb25bQGNsYXNzPVwibGF5b3V0X190b3Atc2VjdGlvblwiXS91bFtAY2xhc3M9XCJnZW5lcmFsLWluZm8gbGF5b3V0X19nZW5lcmFsLWluZm9cIl0vbGlbQGNsYXNzPVwicGFyYW1ldGVyLXdyYXBwZXIgZ2VuZXJhbC1pbmZvX19wYXJhbWV0ZXJcIl0vZGl2WzJdIiwiYXQiOiIyNTMsIDIwMyIsIndlIjp0cnVlLCJmYSI6dHJ1ZX19*/
       /*Browser*/
       _SELECTOR = " \u003eCSS\u003e ul \u003e :nth-child(1) \u003e :nth-child(2)";
       wait_element(_SELECTOR)!
       get_element_selector(_SELECTOR, false).text()!
-      VAR_SAVED_TEXT = _result()
+      VAR_IP_TEXT = _result()
+      section_end()!
+
+      section_start("", 909846028)!
+      /*Dat:eyJzIjoiUmVzb3VyY2VUb0FycmF5IiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJkIjpbeyJpZCI6IlJlc291cmNlTmFtZSIsInR5cGUiOiJ2YXIiLCJkYXRhIjoi0KTQsNC50Lsg0LTQu9GPINCw0LnQv9C40YjQvdC40LrQvtCyKNGH0YLQvtCx0Ysg0YPQsdGA0LDRgtGMINC00YPQsdC70LgpIn0seyJpZCI6IlNhdmUiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IkJMQUNLTElTVF9JUF9MSVNUIn1dfQ==*/
+      VAR_BLACKLIST_IP_LIST = RPick("Файл для айпишников(чтобы убрать дубли)")
+      section_end()!
+
+      section_start("\u007b\u0022n\u0022:\u0022ПЕРЕБОР АЙПИШНИКОВ, КОТОРЫЕ УЖЕ БЫЛИ ИСПОЛЬЗОВАННЫ\u0022\u007d", 511904415)!
+      /*Dat:eyJzIjoiZm9yZWFjaCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwiZCI6W3siaWQiOiJGb3JBcnJheSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiW1tCTEFDS0xJU1RfSVBfTElTVF1dIiwiY2xhc3MiOiJleHByZXNzaW9uIn1dfQ==*/
+      _do_with_params({"foreach_data":(VAR_BLACKLIST_IP_LIST)},function(){
+      VAR_CYCLE_INDEX = _iterator() - 1
+      if(VAR_CYCLE_INDEX > _cycle_param("foreach_data").length - 1)_break();
+      VAR_FOREACH_DATA = _cycle_param("foreach_data")[VAR_CYCLE_INDEX]
+      section_insert()
+         section_start("", 269637202)!
+         /*Dat:eyJzIjoiaWYiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsImQiOlt7ImlkIjoiSWZFeHByZXNzaW9uIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiJbW0ZPUkVBQ0hfREFUQV1dID09IFtbSVBfVEVYVF1dIiwiY2xhc3MiOiJleHByZXNzaW9uIn0seyJpZCI6IklmRWxzZSIsInR5cGUiOiJjaGVjayIsImRhdGEiOmZhbHNlfV19*/
+         _if(VAR_FOREACH_DATA == VAR_IP_TEXT,function(){
+         section_insert()
+            section_start("", 221665340)!
+            /*Dat:eyJzIjoibG9nIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJkIjpbeyJpZCI6IkxvZ1RleHQiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6ItC+0LHQvdCw0YDRg9C20LXQvSDQtNGD0LHQu9GMINCw0LTRgNC10YHQsCBbW0lQX1RFWFRdXS4g0JrQtCDQvNC40L3Rg9GC0LAg0L3QsCDRgdC80LXQvdGDIElQIiwiY2xhc3MiOiJzdHJpbmcifV19*/
+            log("обнаружен дубль адреса " + VAR_IP_TEXT + ". Кд минута на смену IP")
+            section_end()!
+
+            section_start("", 325745552)!
+            /*Dat:eyJzIjoic2xlZXAiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsImQiOlt7ImlkIjoic2xlZXBmcm9tIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIxMDAwIiwiY2xhc3MiOiJpbnQifSx7ImlkIjoic2xlZXB0byIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiMTAwMCIsImNsYXNzIjoiaW50In0seyJpZCI6InNsZWVwZnJvbXRvIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiI2MjAwMCIsImNsYXNzIjoiaW50In0seyJpZCI6InNsZWVwcmFuZG9tIiwidHlwZSI6ImNoZWNrIiwiZGF0YSI6ZmFsc2V9XX0=*/
+            sleep(62000)!
+            section_end()!
+
+            section_start("", 296918481)!
+            /*Dat:eyJzIjoiZ290byIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwiZCI6W3siaWQiOiJMYWJlbE5hbWUiLCJ0eXBlIjoidGV4dCIsImRhdGEiOiJSRUZSRVNIX1BST1hZIn1dfQ==*/
+            _long_goto("REFRESH_PROXY", 2, [])!
+            section_end()!
+
+         })!
+         section_end()!
+
+      })!
       section_end()!
 
       section_start("", 212997542)!
-      /*Dat:eyJzIjoibG9nIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJkIjpbeyJpZCI6IkxvZ1RleHQiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IltbU0FWRURfVEVYVF1dIiwiY2xhc3MiOiJzdHJpbmcifV19*/
-      log(VAR_SAVED_TEXT)
+      /*Dat:eyJzIjoibG9nIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJkIjpbeyJpZCI6IkxvZ1RleHQiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IltbSVBfVEVYVF1dIiwiY2xhc3MiOiJzdHJpbmcifV19*/
+      log(VAR_IP_TEXT)
       section_end()!
 
    }
@@ -767,11 +802,11 @@ section(1 /*1*/,RESOURCE_1 /*{{Количество аккаунтов с кот
 EnableWidevine=false
 AutostartDebug=false
 ProfilesCaching=true
-ToolboxHeight=260
+ToolboxHeight=371
 MaxBrowserStartSimultaneously=3
 MinFreeMemoryToStartBrowser=1500
 MinUnusedCpu=35
-ScenarioWidth=423
+ScenarioWidth=555
 Zoom=100
 IsMaximized=false
 Restart=true
@@ -1062,6 +1097,30 @@ manual</Values>
                <Value>30</Value>
                <MinValue>1</MinValue>
                <MaxValue>100</MaxValue>
+          </Model>
+          <Defaults/>
+          <Model>
+               <Name>Файл для айпишников(чтобы убрать дубли)</Name>
+               <Description en="Файл для айпишников(чтобы убрать дубли)" ru="Файл для айпишников(чтобы убрать дубли)"/>
+               <SectionName ru=""/>
+               <VisibilityConditionValue></VisibilityConditionValue>
+               <VisibilityConditionVariable></VisibilityConditionVariable>
+               <Type>LinesFromFile</Type>
+               <IsAdvanced>0</IsAdvanced>
+               <Visible>1</Visible>
+               <Enabled>1</Enabled>
+               <AllowedTypes>LinesFromFile</AllowedTypes>
+               <Filename></Filename>
+               <Clean>0</Clean>
+               <Read>1</Read>
+               <Mix>0</Mix>
+               <MaxSuccess>1</MaxSuccess>
+               <MaxFail>1</MaxFail>
+               <MaxSimultaneous>1</MaxSimultaneous>
+               <Interval>5000</Interval>
+               <ReloadInterval>0</ReloadInterval>
+               <RenewInterval>-1</RenewInterval>
+               <Greedy>0</Greedy>
           </Model>
           <Defaults/>
      </ModelList>
